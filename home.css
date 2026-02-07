@@ -1,0 +1,133 @@
+
+
+/* Body styling */
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;       /* stick to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 50px;   /* larger padding */
+  background-color: #C7A2E3;
+  border-radius: 0 0 23px 23px; /* rounded bottom corners for style */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;         /* make sure it stays on top */
+  box-sizing: border-box;
+}
+
+/* Title/logo */
+header h1 {
+  margin: 0;
+  font-size: 70px;       /* bigger */
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Navigation */
+.nav {
+  margin-left: auto;
+  display: flex;
+}
+
+.nav a {
+  margin: 0 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;          /* nav links white for contrast */
+  padding: 8px 8px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 25px;       /* bigger links */
+}
+
+/* Hover effect for nav links */
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* subtle highlight */
+  transform: scale(1.05);
+}
+
+h2 {
+  width: 340px;
+  height: 240px;
+  padding: 25px;
+  border-radius: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 34px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+h2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Add top margin for main content so it doesn't hide behind fixed header */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 95%;
+  max-width: 1080px;
+  margin: 175px auto 50px; /* top margin = header height + some space */
+}
+
+/* Big rectangular h2 boxes */
+.cards h2 {
+  width: 100%;
+  height: 330px;          /* adjust height as you like */
+  padding: 25px;
+  border-radius: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 34px;
+  font-weight: 600;
+  
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.cards h2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Pastel colors */
+.music {
+  background-color: #E6D4F5; /* lavender */
+  color: #5B2C6F;
+}
+
+.movies {
+  background-color: #D6E4F0; /* light blue */
+  color: #1B4F72; 
+}
+
+.sports {
+  background-color: #F2D9EB; /* soft pink */
+  color: #b8539a;
+}
+
+.dating {
+  background-color: #F7D6DC; /* blush */
+  color: #bf4e63;
+}
