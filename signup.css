@@ -1,0 +1,162 @@
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #c7a2e3;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+}
+
+ #title {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Navigation */
+#nav_signup a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#nav a:hover {
+    color:rgb(219,238,248);
+}
+
+/* Form container */
+#imAform {
+    background-color: #EFCFEF;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form heading */
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Labels and inputs */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* ---- FIX RADIO BUTTON LAYOUT ---- */
+input[type="radio"]{
+  width: auto;        /* cancel 100% */
+  padding: 0;         /* cancel padding */
+  margin: 0 10px 0 0; /* space between circle and text */
+}
+
+/* Make each pronoun option be on one line */
+#imAform label.radioRow{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+/* ---- PRETTY RADIO BUTTONS ---- */
+#imAform .radioRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#imAform .radioRow:hover {
+  background-color: rgba(154, 201, 247, 0.25);
+}
+
+#imAform input[type="radio"] {
+  accent-color: #9AC9F7;   /* modern browsers */
+  transform: scale(1.1);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9AC9F7;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    form {
+        padding: 20px;
+    }
+
+    header #title {
+        font-size: 1.5rem;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+}
