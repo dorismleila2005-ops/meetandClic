@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MeetandClic</title>
+    <link rel="stylesheet" href="signup.css" />
+	<!--<script src='events_lab.js'></script> add script-->
+  </head>
+
+  <body>
+   <header id=" main_header">
+    <p id="title">Meet 'n' Click</p>
+      <nav id="nav_signup"> 
+        <a href="home.html">Home</a>
+        <a href="">Log in</a>
+        <a href=""> About </a>
+      </nav>
+   </header>
+
+   
+      <form id="imAform" action="#" method="post">
+        <h2>Sign Up</h2>
+          <label for="Firstnameid">Firstname</label>
+          <input type="text" id="Firstnameid" placeholder="Firstname" required>
+          <label for="Lastnameid">LastName</label>
+          <input type="text" id="Lastnameid" placeholder="LastName" required>
+          <label for="usernameid"> Username: </label><br>
+					<input type="text" id="usernameid" placeholder="Username" minlength="5" required class="inputstyle"><br>
+          <label for="passwordid"> Password</label>
+          <input type="password" id="passwordid" required minlength="6" maxlength="30" placeholder="Password" required>
+					<label for="emailid" > Email </label><br>
+					<input type="email" id="emailid" required minlength="15" maxlength="30" placeholder="exemple@gmail.com" class="inputstyle"><br>
+				
+					<label>Pronouns</label>
+
+          <label class="radioRow">
+            <input type="radio" name="pronouns" value="he/him"> he/him
+          </label>
+
+          <label class="radioRow">
+            <input type="radio" name="pronouns" value="she/her"> she/her
+          </label>
+
+          <label class="radioRow">
+            <input type="radio" name="pronouns" value="they/them"> they/them
+          </label>
+
+          <label class="radioRow">
+            <input type="radio" name="pronouns" value="other"> Other
+          </label>
+
+          <button type="submit" id="submit"> Submit </button>
+      </form>
+  </body>
+   
