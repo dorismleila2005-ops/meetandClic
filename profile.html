@@ -3,20 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Profile </title>
+	<title>Meet n Clic - Profile </title>
 	<link rel="stylesheet" href="profile_styles.css">
-	
+	<script src = "themes.js"></script>	
 </head>
-<header>
+
+<body>
+	<header>
         <p id="title">Meet 'n' Clic</p>
 
         <nav class="nav">
-          <a id="home" href ="">Home</a>
-          <a id="sign" href ="" target ="_blank">Sign Up</a>
-		  <a id="about_us href="">
+          <a id="home" href ="home.html">Home</a>
+          <a id="log_out" href ="" target ="_blank">Log out</a>
+		  <a id="about_us" href="about.html" target="_blank">About Us</a>
+		  
         </nav>
+	</header>
+	<main>
+		 <section class="profile-container">
+            <div class="profile-info">
+                <h2 id="username">Username: <span>CoolUser123</span></h2>
+                <p>Age: <span>25</span></p>
+                <p>Hobbies: <span>Gaming, Reading, Hiking</span></p>
+            </div>
 
-</header>
-<body>
+            <div class="template-selector">
+                <label for="theme">Choose a vibe:</label>
+                <select id="theme" onchange="changeTheme()">
+                    <option value="neutral">Neutral</option>
+                    <option value="fairy">Fairy</option>
+                    <option value="robotic">Robotic</option>
+                </select>
+            </div>
+        </section>
+	</main>
 </body>
 </html>
