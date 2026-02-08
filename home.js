@@ -63,7 +63,7 @@ window.addEventListener("load", () => {
     lockEnabled = false; // disable lock during auto scroll
 
     window.scrollTo({
-      top: cards.offsetTop,
+      top: cards.offsetTop + 80,
       behavior: "smooth"
     });
 
@@ -90,3 +90,22 @@ cardBoxes.forEach(card => {
   });
 
 });
+
+window.addEventListener("load", () => {
+  const heroLogo = document.querySelector(".hero-logo");
+  heroLogo.classList.add("logo-intro");
+});
+
+// Select menu button and nav
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
+
+// Toggle the 'open' class on click
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  
+  // Optional: animate the hamburger to an X
+  menuToggle.classList.toggle("active");
+});
+
+
