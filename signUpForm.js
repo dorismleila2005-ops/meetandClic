@@ -7,17 +7,17 @@ document.addEventListener("DOMContentLoaded",function() {
     
         let users = JSON.parse(localStorage.getItem("users")) || [];
 		
-		const pronoun = document.querySelector('input[name="pronouns"]: checked')?.value;
+		const pronounInput = document.querySelector('input[name="pronouns"]:checked');
         const newuser={
             username: document.getElementById("usernameid").value,
             firstname: document.getElementById("Firstnameid").value,
             lastname: document.getElementById("Lastnameid").value,
             password: document.getElementById("passwordid").value,
             email: document.getElementById("emailid").value,
-            pronoun: pronoun
+            pronoun: pronounInput.value
         };
 
-        users.push(newUser);
+        users.push(newuser);
 
         localStorage.setItem("users", JSON.stringify(users));
 		alert("Account created!");
