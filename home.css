@@ -7,7 +7,6 @@ body {
     align-items: stretch;   /* <-- change this */
     min-height: 100vh;
     font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth;
 }
 
 /* Header styling */
@@ -107,7 +106,7 @@ h2:hover {
 /* Big rectangular h2 boxes */
 .cards h2 {
   width: 100%;
-  height: 330px;          /* adjust height as you like */
+  height: 350px;          /* adjust height as you like */
   padding: 25px;
   border-radius: 28px;
   display: flex;
@@ -142,26 +141,25 @@ h2:hover {
   color: #b8539a;
 }
 
-.dating {
+.games {
   background-color: #F7D6DC; /* blush */
   color: #bf4e63;
 }
 
 .hero {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
+  padding: 0;
   background-color: #C7A2E3;
 
-  border-radius: 0 0 23px 23px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 25px 50px;
-  box-sizing: border-box;
 
-  transition: transform 0.7s ease;
+  box-sizing: border-box;
+  transition: transform 1.5s ease-in-out;
 }
 
 .hero-logo {
@@ -194,3 +192,89 @@ h2:hover {
 .scrolled .header-logo {
   opacity: 1;
 }
+
+/* Bubble animation of cards */
+@keyframes bubbleClickPop {
+
+  0% {
+    transform: translateY(-8px) scale(1);
+  }
+
+  35% {
+    transform: translateY(-8px) scale(1.14);
+  }
+
+  55% {
+    transform: translateY(-8px) scale(0.96);
+  }
+
+  75% {
+    transform: translateY(-8px) scale(1.05);
+  }
+
+  90% {
+    transform: translateY(-8px) scale(0.99);
+  }
+
+  100% {
+    transform: translateY(-8px) scale(1);
+  }
+
+}
+
+.card-pop {
+  animation: bubbleClickPop 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* For Tablets */
+@media (max-width: 1024px) {
+
+  .cards {
+    width: 92%;
+    padding-top: 150px;
+  }
+
+  .cards h2 {
+    height: 300px;
+    font-size: 28px;
+  }
+
+}
+
+/* For large phones */
+@media (max-width: 768px) {
+
+  .cards {
+    width: 90%;
+    gap: 25px;
+    padding-top: 130px;
+  }
+
+  .cards h2 {
+    height: 260px;
+    font-size: 24px;
+    padding: 20px;
+  }
+
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+
+  .cards {
+    width: 88%;
+    gap: 20px;
+    padding-top: 110px;
+  }
+
+  .cards h2 {
+    height: 220px;
+    font-size: 20px;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+}
+
+
+
